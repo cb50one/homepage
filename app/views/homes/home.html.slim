@@ -1,0 +1,147 @@
+.top
+  .top__flash
+    - if flash[:notice]
+      .top__flash-notice
+        = flash[:notice]
+  .top__wrap
+    h2 TAKUMU NAKAJIMA
+    p This is my first portfolio
+    = link_to "お問い合わせ", {}, class: "top-contact"
+.about
+  .about__wrap
+    .about__wrap__left
+      = image_tag "https://motor-fan.jp/images/articles/10005239/big_559198_201808141133380000001.jpg", class: "about-image"
+      .about__wrap__left--name
+        p Takumu Nakajima
+        p 中島　拓夢
+      .about__wrap__left--birth
+        p 1999.6.28
+    .about__wrap__right
+      h2 Profile
+      .about__wrap__right--text
+        p 今年三月にTECH::EXPERTを卒業した19歳です。
+        p プログラミング歴は半年ほどで、まだまだ駆け出しエンジニアです。
+      .about__wrap__right--text
+        p 現在は大阪のスタートアップ企業でインターンシップをやっています。
+        p 好奇心旺盛で新しい技術や機能を試したり、スクールを卒業した今でも日々の学習を欠かさずに行なっています。
+      .about__wrap__right__sns
+        = link_to "https://twitter.com/TbxPftTUzhTrpdH", class: "about__wrap__right__sns--twitter", target: "_blank"
+          = icon "fab", "twitter-square", class: "twitter"
+        = link_to "https://www.facebook.com/gt.vo.5", class: "about__wrap__right__sns--facebook", target: "_blank"
+          = icon "fab", "facebook", class: "facebook"
+.works
+  .works--title
+    h2 WORKS
+    p 実積
+  .works__perfomances
+    .perfomance
+      = image_tag "pictweet.png", class: "works--image"
+      h2 TECH::EXPERT カリキュラム
+      p 画像投稿アプリ
+    .perfomance
+      = image_tag "chatspace.png", class: "works--image" 
+      h2 TECH::EXPERT カリキュラム
+      p 非同期通信チャットアプリ
+    .perfomance
+      = link_to "https://docs.google.com/document/d/1M6vAGhC72_fT_hJlaaOKaHK57u72ZREBy7Qy0oIaBik/edit#", class: "perfomance__link", target: "_blank"
+        = image_tag "merukari.png", class: "works--image" 
+        h2 TECH::EXPERT チーム開発
+        p メルカリ模倣サイト
+    .perfomance
+      = image_tag "portfolio.png", class: "works--image" 
+      h2 現在、ご覧いただいているサイト
+      p ポートフォリオ
+    .perfomance
+      = image_tag "lien.png", class: "works--image" 
+      h2 オリジナルアプリ
+      p SNSマッチングアプリ（開発中）
+    .perfomance
+      = image_tag "lien.png", class: "works--image" 
+      h2 gudeのhp改修
+      p テックリードを務め、フロント・バックエンドの大枠を作成しました。
+  .works__github
+    = link_to "https://github.com/cb50one", class: "works__github__link", target: "_blank"
+      = icon "fab", "github", class: "github"
+      p githubはこちら
+.skills
+  .skills--title
+    h2 SKILLS
+    p 技術
+  .skills__list
+    table
+      tr
+        th 
+          p HTML5/CSS3
+          .star-rating
+            .star-rating-front.html ★★★★★
+            .star-rating-back ★★★★★
+        td 基本的なことは一通りでき、cssフレームワークはbootstrapを使用しています。使わなくても作成可能です。SassやBEM、レスポンシブデザインで作成できます。
+      tr
+        th 
+          p JavaScript
+          .star-rating
+            .star-rating-front.js ★★★★★
+            .star-rating-back ★★★★★
+        td jqueryを用いてアニメーションや非同期通信、バリデーションの実装経験があります。
+      tr
+        th 
+          p Ruby/Ruby on Rails
+          .star-rating
+            .star-rating-front.rails ★★★★★
+            .star-rating-back ★★★★★
+        td メインとして使っている言語です。オリジナルアプリや模倣サイトの作成経験があります。
+      tr
+        th
+          p swift
+          .star-rating
+            .star-rating-front.swift ★★★★★
+            .star-rating-back ★★★★★
+        td 現在、勉強中の言語です。
+      tr
+        th 
+          p Docker
+          .star-rating
+            .star-rating-front.docker ★★★★★
+            .star-rating-back ★★★★★
+        td 現在、勉強中です。
+      tr
+        th 
+          p aws
+          .star-rating
+            .star-rating-front.aws ★★★★★
+            .star-rating-back ★★★★★
+        td EC2やS3を利用したデプロイ経験があります。
+      tr
+        th 
+          p Heroku
+          .star-rating
+            .star-rating-front.heroku ★★★★★
+            .star-rating-back ★★★★★
+        td デプロイ経験あり。
+      tr
+        th 
+          p github
+          .star-rating
+            .star-rating-front.github ★★★★★
+            .star-rating-back ★★★★★
+        td チーム開発でスクラムマスターの経験があります。ルールを決め、コンフリクトの配慮などに努めました。
+.contact
+  .contact--title
+    h2 CONTACT
+    p お問い合わせ
+  .contact__form
+    = form_with url: homes_path, local: true do |f| 
+      .form-group
+        = f.label :名前
+        br/
+        = f.text_field :name, placeholder: "name"
+      .form-group
+        = f.label :メールアドレス
+        br/
+        = f.text_field :email, placeholder: "email address"
+      .form-group
+        = f.label :内容
+        br/
+        = f.text_area :text, placeholder: "content"
+      .form-group
+        = f.submit "送信する", class: "contact-btn"
