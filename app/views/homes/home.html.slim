@@ -4,11 +4,12 @@
       .top__flash-notice
         = flash[:notice]
   .top__wrap
-    h2 TAKUMU NAKAJIMA
-    p This is my first portfolio
-    = link_to "お問い合わせ", {}, class: "top-contact"
+    .top__wrap-fade{data-aos="fade-up", data-aos-delay="200"}
+      h2 TAKUMU NAKAJIMA
+      p This is my first portfolio
+      = link_to "お問い合わせ", {}, class: "top-contact"
 .about
-  .about__wrap
+  .about__wrap{data-aos="fade-up"}
     .about__wrap__left
       = image_tag "https://motor-fan.jp/images/articles/10005239/big_559198_201808141133380000001.jpg", class: "about-image"
       .about__wrap__left--name
@@ -30,10 +31,10 @@
         = link_to "https://www.facebook.com/gt.vo.5", class: "about__wrap__right__sns--facebook", target: "_blank"
           = icon "fab", "facebook", class: "facebook"
 .works
-  .works--title
+  .works--title{data-aos="fade-up"}
     h2 WORKS
     p 実積
-  .works__perfomances
+  .works__perfomances{data-aos="fade-up"}
     .perfomance
       = image_tag "pictweet.png", class: "works--image"
       h2 TECH::EXPERT カリキュラム
@@ -59,15 +60,15 @@
       = image_tag "lien.png", class: "works--image" 
       h2 gudeのhp改修
       p テックリードを務め、フロント・バックエンドの大枠を作成しました。
-  .works__github
+  .works__github{data-aos="fade-up"}
     = link_to "https://github.com/cb50one", class: "works__github__link", target: "_blank"
       = icon "fab", "github", class: "github"
       p githubはこちら
 .skills
-  .skills--title
+  .skills--title{data-aos="fade-up"}
     h2 SKILLS
     p 技術
-  .skills__list
+  .skills__list{data-aos="fade-up"}
     table
       tr
         th 
@@ -126,22 +127,22 @@
             .star-rating-back ★★★★★
         td チーム開発でスクラムマスターの経験があります。ルールを決め、コンフリクトの配慮などに努めました。
 .contact
-  .contact--title
+  .contact--title{data-aos="fade-up"}
     h2 CONTACT
     p お問い合わせ
-  .contact__form
-    = form_with url: homes_path, local: true do |f| 
+  .contact__form{data-aos="fade-up"}
+    = form_with url: homes_path, local: true, html: {id: "form-validate"} do |f| 
       .form-group
         = f.label :名前
         br/
-        = f.text_field :name, placeholder: "name"
+        = f.text_field :name, placeholder: "name", class: "validate[required]", "data-prompt-position": "inline"
       .form-group
         = f.label :メールアドレス
         br/
-        = f.text_field :email, placeholder: "email address"
+        = f.text_field :email, placeholder: "email address", class: "validate[required, custom[email]]", "data-prompt-position": "inline"
       .form-group
         = f.label :内容
         br/
-        = f.text_area :text, placeholder: "content"
+        = f.text_area :text, placeholder: "content", class: "validate[required]", "data-prompt-position": "inline"
       .form-group
         = f.submit "送信する", class: "contact-btn"
