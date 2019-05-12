@@ -83,14 +83,15 @@
   position: relative;
   padding: 80px 0;
   &__wrap {
-    clear: both;
     width: 80%;
     margin: 0 auto;
     height: 75%;
     display: flex;
     &__left {
       color: #ddd;
-      padding: 45px 35px 0 20px;
+      padding: 45px 25px 0 10px;
+      width: 220px;
+      flex-shrink: 0;
       text-align: center;
       font-family: serif, sans-serif;
       border-right: 1px solid #ccc;
@@ -155,6 +156,7 @@
         border: none;
         padding: 0 0 25px;
         border-bottom: 1px solid #ccc;
+        width: auto;
       }
       &__right {
         border: none;

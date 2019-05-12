@@ -1,6 +1,6 @@
 $(function(){
   AOS.init({
-    duration: 1100
+    duration: 1500
   });
 
   var posion = $('.contact').offset().top

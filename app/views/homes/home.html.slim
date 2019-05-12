@@ -4,20 +4,20 @@
       .top__flash-notice
         = flash[:notice]
   .top__wrap
-    .top__wrap-fade{data-aos="fade-up", data-aos-delay="200"}
+    .top__wrap-fade{data-aos="fade-in", data-aos-delay="300"}
       h2 TAKUMU NAKAJIMA
       p This is my first portfolio
       = link_to "お問い合わせ", {}, class: "top-contact"
 .about
-  .about__wrap{data-aos="fade-up"}
-    .about__wrap__left
+  .about__wrap
+    .about__wrap__left{data-aos="fade-right"}
       = image_tag "https://motor-fan.jp/images/articles/10005239/big_559198_201808141133380000001.jpg", class: "about-image"
       .about__wrap__left--name
         p Takumu Nakajima
         p 中島　拓夢
       .about__wrap__left--birth
         p 1999.6.28
-    .about__wrap__right
+    .about__wrap__right{data-aos="fade-left"}
       h2 Profile
       .about__wrap__right--text
         p 今年三月にTECH::EXPERTを卒業した19歳です。
@@ -68,7 +68,7 @@
   .skills--title{data-aos="fade-up"}
     h2 SKILLS
     p 技術
-  .skills__list{data-aos="fade-up"}
+  .skills__list{data-aos="zoom-in"}
     table
       tr
         th 
