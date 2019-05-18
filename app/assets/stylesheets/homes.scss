@@ -195,16 +195,16 @@
       text-align: center;
       .works--image {
         width: 100%;
+        margin-bottom: 10px;
       }
       p {
         padding-top: 10px;
         font-size: 16px;
       }
       &__link {
-        color: red;
+        color: #0f0;
         &:hover {
           opacity: 0.8;
-          color: orangered;
         }
       }
     }

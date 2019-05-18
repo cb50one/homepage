@@ -6,7 +6,7 @@
   .top__wrap
     .top__wrap-fade{data-aos="fade-in", data-aos-delay="300"}
       h2 TAKUMU NAKAJIMA
-      p This is my first portfolio
+      p.top__wrap--detail This is my first portfolio
       = link_to "お問い合わせ", {}, class: "top-contact"
 .about
   .about__wrap
@@ -26,7 +26,7 @@
         p 現在は大阪のスタートアップ企業でインターンシップをやっています。
         p 好奇心旺盛で新しい技術や機能を試したり、スクールを卒業した今でも日々の学習を欠かさずに行なっています。
       .about__wrap__right__sns
-        = link_to "https://twitter.com/TbxPftTUzhTrpdH", class: "about__wrap__right__sns--twitter", target: "_blank"
+        = link_to "https://twitter.com/jima_engineer", class: "about__wrap__right__sns--twitter", target: "_blank"
           = icon "fab", "twitter-square", class: "twitter"
         = link_to "https://www.facebook.com/gt.vo.5", class: "about__wrap__right__sns--facebook", target: "_blank"
           = icon "fab", "facebook", class: "facebook"
@@ -57,9 +57,10 @@
       h2 オリジナルアプリ
       p SNSマッチングアプリ（開発中）
     .perfomance
-      = image_tag "lien.png", class: "works--image" 
-      h2 gudeのhp改修
-      p テックリードを務め、フロント・バックエンドの大枠を作成しました。
+      = link_to "http://gude.osaka", class: "perfomance__link", target: "_blank"
+        = image_tag "gude_hp.png", class: "works--image" 
+        h2 gudeのhp改修
+        p テックリードを務め、フロント・バックエンドの大枠を作成しました。
   .works__github{data-aos="fade-up"}
     = link_to "https://github.com/cb50one", class: "works__github__link", target: "_blank"
       = icon "fab", "github", class: "github"
@@ -118,7 +119,7 @@
           .star-rating
             .star-rating-front.heroku ★★★★★
             .star-rating-back ★★★★★
-        td デプロイ経験あり。
+        td デプロイ経験があります。
       tr
         th 
           p github
@@ -134,14 +135,17 @@
     = form_with url: homes_path, local: true, html: {id: "form-validate"} do |f| 
       .form-group
         = f.label :名前
+        span.required 必須
         br/
         = f.text_field :name, placeholder: "name", class: "validate[required]", "data-prompt-position": "inline"
       .form-group
         = f.label :メールアドレス
+        span.required 必須
         br/
         = f.text_field :email, placeholder: "email address", class: "validate[required, custom[email]]", "data-prompt-position": "inline"
       .form-group
         = f.label :内容
+        span.required 必須
         br/
         = f.text_area :text, placeholder: "content", class: "validate[required]", "data-prompt-position": "inline"
       .form-group

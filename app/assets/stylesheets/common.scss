@@ -1,0 +1,21 @@
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.top__wrap--detail {
+  animation: fadeOut 1.5s 2s infinite linear alternate;
+}
+
+.required {
+  background-color: red;
+  padding: 3px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  margin-left: 4px;
+}
