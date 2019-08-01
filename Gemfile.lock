@@ -86,6 +86,7 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    google-analytics-rails (1.1.1)
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
@@ -232,6 +233,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   dotenv-rails
   font-awesome-sass
+  google-analytics-rails
   html2slim
   jQuery-Validation-Engine-rails
   jbuilder (~> 2.5)
