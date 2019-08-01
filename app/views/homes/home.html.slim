@@ -20,11 +20,10 @@
     .about__wrap__right{data-aos="fade-left"}
       h2 Profile
       .about__wrap__right--text
-        p 今年三月にTECH::EXPERTを卒業した19歳です。
-        p プログラミング歴は半年ほどで、まだまだ駆け出しエンジニアです。
+        p バイクと音楽が好きな大阪出身の20歳。
+        p 今年三月にTECH::EXPERTを卒業し、4ヶ月ほど大阪のスタートアップでインターンをしていました。
       .about__wrap__right--text
-        p 現在は大阪のスタートアップ企業でインターンシップをやっています。
-        p 好奇心旺盛で新しい技術や機能を試したり、スクールを卒業した今でも日々の学習を欠かさずに行なっています。
+        p 東京のweb系自社開発企業への就職を志望しており、日々精進しています。
       .about__wrap__right__sns
         = link_to "https://twitter.com/jima_engineer", class: "about__wrap__right__sns--twitter", target: "_blank"
           = icon "fab", "twitter-square", class: "twitter"
@@ -50,17 +49,22 @@
         p メルカリ模倣サイト
     .perfomance
       = image_tag "portfolio.png", class: "works--image" 
-      h2 現在、ご覧いただいているサイト
-      p ポートフォリオ
+      h2 ポートフォリオ
+      p 現在ご覧いただいているサイト
     .perfomance
-      = image_tag "lien.png", class: "works--image" 
-      h2 オリジナルアプリ
-      p SNSマッチングアプリ（開発中）
+      = link_to "https://lienlien.work/about", class: "perfomance__link", target: "_blank"
+        = image_tag "lien.png", class: "works--image"
+        h2 個人アプリ
+        p チャットアプリ
+    .perfomance
+      = image_tag "gudenal.png", class: "works--image" 
+      h2 インターン
+      p 新規プロジェクト
     .perfomance
       = link_to "http://gude.osaka", class: "perfomance__link", target: "_blank"
         = image_tag "gude_hp.png", class: "works--image" 
-        h2 gudeのhp改修
-        p テックリードを務め、フロント・バックエンドの大枠を作成しました。
+        h2 インターン
+        p hp改修
   .works__github{data-aos="fade-up"}
     = link_to "https://github.com/cb50one", class: "works__github__link", target: "_blank"
       = icon "fab", "github", class: "github"
@@ -73,60 +77,28 @@
     table
       tr
         th 
-          p HTML5/CSS3
-          .star-rating
-            .star-rating-front.html ★★★★★
-            .star-rating-back ★★★★★
-        td 基本的なことは一通りでき、cssフレームワークはbootstrapを使用しています。使わなくても作成可能です。SassやBEM、レスポンシブデザインで作成できます。
+          p 言語
+        td HTML5/CSS3, JavaScript, ruby
       tr
         th 
-          p JavaScript
-          .star-rating
-            .star-rating-front.js ★★★★★
-            .star-rating-back ★★★★★
-        td jqueryを用いてアニメーションや非同期通信、バリデーションの実装経験があります。
+          p フレームワーク・ライブラリ
+        td jquery, Ruby on Rails
       tr
         th 
-          p Ruby/Ruby on Rails
-          .star-rating
-            .star-rating-front.rails ★★★★★
-            .star-rating-back ★★★★★
-        td メインとして使っている言語です。オリジナルアプリや模倣サイトの作成経験があります。
-      tr
-        th
-          p swift
-          .star-rating
-            .star-rating-front.swift ★★★★★
-            .star-rating-back ★★★★★
-        td 現在、勉強中の言語です。
-      tr
-        th 
-          p Docker
-          .star-rating
-            .star-rating-front.docker ★★★★★
-            .star-rating-back ★★★★★
-        td 現在、勉強中です。
+          p インフラ
       tr
         th 
           p aws
-          .star-rating
-            .star-rating-front.aws ★★★★★
-            .star-rating-back ★★★★★
-        td EC2やS3を利用したデプロイ経験があります。
+        td 
+          p VPC/ec2/IAM/S3/RDS(mysql)/Route53
+          p SAA試験に向け勉強中です。
       tr
         th 
-          p Heroku
-          .star-rating
-            .star-rating-front.heroku ★★★★★
-            .star-rating-back ★★★★★
-        td デプロイ経験があります。
+          p その他
       tr
         th 
-          p github
-          .star-rating
-            .star-rating-front.github ★★★★★
-            .star-rating-back ★★★★★
-        td チーム開発でスクラムマスターの経験があります。ルールを決め、コンフリクトの配慮などに努めました。
+          p Docker
+        td 現在、勉強中です。
 .contact
   .contact--title{data-aos="fade-up"}
     h2 CONTACT
