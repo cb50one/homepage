@@ -269,38 +269,7 @@
     }
   }
 }
-.star-rating {
-  position: relative;
-  width: 5em;
-  height: 1em;
-  font-size: 25px;
-  margin: 0 auto;
-  .star-rating-front {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    color: #ffcc33;
-  }
-  .star-rating-back {
-    color: #ccc;
-  }
-  .html {
-    width: 80%;
-  }
-  .rails, .heroku, .github {
-    width: 60%;
-  }
-  .js {
-    width: 50%;
-  }
-  .aws {
-    width: 30%;
-  }
-  .swift, .docker {
-    width: 20%;
-  }
-}
+
 .contact {
   background-image: url(https://www.spinap.jp/files/2015/08/computer-desk-work-1024x603.jpg);
   background-size: cover;
